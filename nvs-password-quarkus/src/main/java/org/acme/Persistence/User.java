@@ -10,12 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 @Entity
-public class User {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
+@Getter
+@Setter
+@ToString
 
-
+public class User extends PanacheEntity{
     private String userName;
     private String telephonNumber;
     private String passWord;
