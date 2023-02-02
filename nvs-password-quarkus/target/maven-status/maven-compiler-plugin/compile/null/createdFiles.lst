@@ -1,0 +1,3 @@
+org\acme\Persistence\Register.class
+org\acme\Persistence\User.class
+META-INF\panache-archive.marker
