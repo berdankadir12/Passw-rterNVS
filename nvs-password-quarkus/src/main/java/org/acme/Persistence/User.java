@@ -6,6 +6,9 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -15,9 +18,18 @@ import java.util.UUID;
 @ToString
 
 public class User extends PanacheEntity{
-    private String userName;
-    private String telephonNumber;
-    private String passWord;
+    @NotBlank(message="Username can not be empty")
+    private String Username;
+
+    @Email(message = "Wrong format email")
+    @NotBlank(message="Email can not be empty")
+    private String Email;
+
+    @Pattern(regexp="(^$|[0-9]{10})")
+    private String Telephonnumber;
+
+    @NotBlank(message="Password can not be empty")
+    private String Password;
 
 
 
