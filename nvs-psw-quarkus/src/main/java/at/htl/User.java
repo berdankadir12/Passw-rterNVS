@@ -23,6 +23,7 @@ public class User  {
     private long id;
 
     @NotBlank(message="Username can not be empty")
+
     private String username;
 
     @Email(message = "Wrong format email")
@@ -36,5 +37,6 @@ public class User  {
 
 
     private String salt;
+
 
 }
